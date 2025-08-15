@@ -1,3 +1,4 @@
+
 function BotoesControle(props){
     return(
         <div className="caixa-botoes">
@@ -10,7 +11,7 @@ function BotoesControle(props){
                 <i className='bi bi-arrow-counterclockwise'></i>
             </button>
 
-            <button onClick={() => props.definirTaTocando(true)}>
+            <button onClick={() => {if(props.taTocando){props.definirTaTocando(false)}else{props.definirTaTocando(true)}}}>
                 <i
                     className={`bi bi-${
                         props.taTocando ? 'pause' : 'play'
