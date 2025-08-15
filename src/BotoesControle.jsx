@@ -10,11 +10,9 @@ function BotoesControle(props){
                 <i className='bi bi-arrow-counterclockwise'></i>
             </button>
 
-            <button onClick={() => {if(props.taTocando){props.definirTaTocando(false)}else{props.definirTaTocando(true)}}}>
+            <button onClick={props.tocarOuPausarFaixa}>
                 <i
-                    className={`bi bi-${
-                        props.taTocando ? 'pause' : 'play'
-                    }-circle-fill`}
+                    className={`bi bi-${props.taTocando ? 'pause' : 'play'}-circle-fill`}
                 >
                 </i>
             </button>
@@ -29,5 +27,5 @@ function BotoesControle(props){
 
         </div>
     );
-}
+};
 export default BotoesControle;
