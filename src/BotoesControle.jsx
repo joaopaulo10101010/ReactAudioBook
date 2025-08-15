@@ -1,4 +1,3 @@
-
 function BotoesControle(props){
     return(
         <div className="caixa-botoes">
